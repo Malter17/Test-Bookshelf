@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif; /* Mengatur font untuk seluruh halaman */
+    line-height: 1.6; /* Menentukan jarak baris untuk teks */
+    margin: 0; /* Menghapus margin default pada body */
+    padding: 0; /* Menghapus padding default pada body */
+    background-color: #f4f4f4; /* Menentukan warna latar belakang halaman */
+}
+  
+header {
+    background: #333; /* Warna latar belakang header */
+    color: #fff; /* Warna teks header */
+    padding: 10px 0; /* Padding atas dan bawah untuk header */
+    text-align: center; /* Mengatur teks header agar rata tengah */
+}
+  
+h1 {
+    margin: 0; /* Menghapus margin default pada elemen h1 */
+}
+  
+/* Gaya untuk Bagian (Section) */
+section {
+    padding: 20px; /* Padding untuk bagian */
+    margin: 0 auto; /* Margin otomatis untuk sentralisasi konten */
+    max-width: 800px; /* Lebar maksimum untuk bagian */
+}
+
+/* Gaya untuk Formulir (Form) */
+form {
+    background: #fff; /* Warna latar belakang formulir */
+    padding: 20px; /* Padding di sekitar isi formulir */
+    border-radius: 8px; /* Membuat sudut formulir melengkung */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut di sekitar formulir */
+    max-width: 100%; /* Menjamin formulir tidak melebihi lebar kontainernya */
+}
+
+/* Gaya untuk Input Formulir */
+form input[type="text"],
+form input[type="number"],
+form input[type="checkbox"],
+form select {
+    width: calc(100% - 22px); /* Lebar input kurang padding dan border */
+    padding: 10px; /* Padding di dalam input */
+    border: 1px solid #ddd; /* Warna dan ketebalan border input */
+    border-radius: 4px; /* Membuat sudut input melengkung */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar total */
+}
+
+form select {
+    width: 100%; /* Lebar select dropdown penuh */
+}
+
+/* Mengatasi input pencarian panjang */
+#searchBookFormTitleInput {
+    max-width: 100%; /* Lebar maksimum untuk input pencarian */
+}
+
+/* Gaya untuk Tombol (Button) */
+form button {
+    background: #333; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    border: none; /* Menghapus border default tombol */
+    padding: 10px 15px; /* Padding dalam tombol */
+    border-radius: 4px; /* Membuat sudut tombol melengkung */
+    cursor: pointer; /* Mengubah kursor saat hover di tombol */
+}
+  
+form button:hover {
+    background: #555; /* Warna latar belakang tombol saat hover */
+}
+  
+button[data-testid="bookItemIsCompleteButton"],
+button[data-testid="bookItemDeleteButton"] {
+    background: #007bff; /* Warna latar belakang tombol buku */
+    color: #fff; /* Warna teks tombol buku */
+    border: none; /* Menghapus border default tombol buku */
+    padding: 5px 10px; /* Padding dalam tombol buku */
+    margin-right: 5px; /* Jarak kanan antara tombol buku */
+    border-radius: 4px; /* Membuat sudut tombol buku melengkung */
+    cursor: pointer; /* Mengubah kursor saat hover di tombol buku */
+}
+  
+button[data-testid="bookItemIsCompleteButton"]:hover,
+button[data-testid="bookItemDeleteButton"]:hover {
+    background: #0056b3; /* Warna latar belakang tombol buku saat hover */
+}
+  
+/* Gaya untuk Daftar Buku */
+#incompleteBookList,
+#completeBookList {
+    background: #fff; /* Warna latar belakang daftar buku */
+    padding: 15px; /* Padding di sekitar isi daftar buku */
+    border-radius: 8px; /* Membuat sudut daftar buku melengkung */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Bayangan lembut di sekitar daftar buku */
+}
+
+/* Mengatur gaya untuk item daftar buku */
+#incompleteBookList div,
+#completeBookList div {
+    border-bottom: 1px solid #ddd; /* Border bawah untuk setiap item buku */
+    padding: 10px 0; /* Padding vertikal di sekitar item buku */
+}
+
+#incompleteBookList div:last-child,
+#completeBookList div:last-child {
+    border-bottom: none; /* Menghapus border bawah pada item terakhir */
+}
+
+/* Gaya untuk Input Pencarian */
+#searchBookFormTitleInput,
+#searchYearInput,
+#searchGenreInput {
+    width: calc(100% - 22px); /* Lebar input pencarian kurang padding dan border */
+    padding: 10px; /* Padding di dalam input pencarian */
+    margin-bottom: 15px; /* Jarak bawah antara input pencarian */
+    border: 1px solid #ddd; /* Warna dan ketebalan border input pencarian */
+    border-radius: 4px; /* Membuat sudut input pencarian melengkung */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar total */
+}
+  
+#searchBookFormTitleInput {
+    margin-top: 15px; /* Jarak atas untuk input pencarian judul */
+}
+
+/* Gaya untuk Checkbox */
+form input[type="checkbox"] {
+    width: auto; /* Lebar otomatis untuk input checkbox */
+    margin-right: 10px; /* Jarak kanan antara checkbox dan label */
+    vertical-align: middle; /* Menyelaraskan checkbox secara vertikal dengan teks label */
+}
+  
+form label {
+    display: flex; /* Menggunakan Flexbox untuk tata letak label dan checkbox */
+    align-items: center; /* Menyelaraskan checkbox dan teks secara vertikal */
+}

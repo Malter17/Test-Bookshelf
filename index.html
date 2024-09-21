@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Bagian Header: Menampilkan judul aplikasi -->
+    <header>
+      <h1>Bookshelf App</h1>
+    </header>
+    
+    <!-- Bagian Pencarian Buku: Formulir untuk mencari buku berdasarkan judul, penulis, tahun, dan genre -->
+    <section>
+      <h2>Cari Buku</h2>
+      <!-- Formulir Pencarian Buku -->
+      <form id="searchBookForm" data-testid="searchBookForm">
+        <!-- Input untuk mencari berdasarkan judul atau penulis -->
+        <input type="text" id="searchBookFormTitleInput" placeholder="Search by title or author..." data-testid="searchBookFormTitleInput" />
+        <!-- Input untuk mencari berdasarkan tahun -->
+        <input type="number" id="searchYearInput" placeholder="Search by year..." data-testid="searchYearInput" />
+        <!-- Dropdown untuk memilih genre buku -->
+        <select id="searchGenreInput" data-testid="searchGenreInput">
+          <option value="">All genres</option>
+          <option value="Romance">Romance</option>
+          <option value="Isekai">Isekai</option>
+          <option value="Fantasi">Fantasi</option>
+        </select>
+        <!-- Tombol untuk mencari buku -->
+        <button type="submit" id="searchBookFormSubmitButton" data-testid="searchBookFormSubmitButton">Search</button>
+      </form>
+    </section>
+    
+    <main>
+      <!-- Bagian Formulir: Menambahkan buku baru ke rak -->
+      <section>
+        <h2>Tambah Buku Baru</h2>
+        <form id="bookForm" data-testid="bookForm">
+          <!-- Input untuk judul buku -->
+          <div>
+            <label for="bookFormTitle">Judul</label>
+            <input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" />
+          </div>
+          <!-- Input untuk penulis buku -->
+          <div>
+            <label for="bookFormAuthor">Penulis</label>
+            <input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" />
+          </div>
+          <!-- Input untuk tahun terbit buku -->
+          <div>
+            <label for="bookFormYear">Tahun</label>
+            <input id="bookFormYear" type="number" required data-testid="bookFormYearInput" />
+          </div>
+          <!-- Dropdown untuk memilih genre buku -->
+          <div>
+            <label for="bookFormGenre">Genre</label>
+            <select id="bookFormGenre" required data-testid="bookFormGenreSelect">
+              <option value="" disabled selected>Pilih genre...</option>
+              <option value="Romance">Romance</option>
+              <option value="Isekai">Isekai</option>
+              <option value="Fantasi">Fantasi</option>
+            </select>
+          </div>
+          <!-- Checkbox untuk menandai buku sudah selesai dibaca -->
+          <div>
+            <label for="bookFormIsComplete">Selesai dibaca</label>
+            <input id="bookFormIsComplete" type="checkbox" data-testid="bookFormIsCompleteCheckbox" />
+          </div>
+          <!-- Tombol untuk menambahkan buku ke rak -->
+          <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+            Masukkan Buku ke rak
+          </button>
+        </form>
+      </section>
+
+      <!-- Bagian Buku Belum Selesai Dibaca: Menampilkan daftar buku yang belum selesai dibaca -->
+      <section>
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookList" data-testid="incompleteBookList"></div>
+      </section>
+
+      <!-- Bagian Buku Selesai Dibaca: Menampilkan daftar buku yang sudah selesai dibaca -->
+      <section>
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookList" data-testid="completeBookList"></div>
+      </section>
+    </main>
+  </body>
+</html>
